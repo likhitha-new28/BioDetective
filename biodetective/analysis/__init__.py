@@ -1,0 +1,127 @@
+"""BioDetective quality-control analyses."""
+
+from biodetective.analysis.batch_effects import (
+    BatchEffectConfig,
+    BatchEffectResult,
+    analyze_batch_pca_association,
+)
+from biodetective.analysis.confounding import (
+    COMPLETE_CONFOUNDING_EXPLANATION,
+    ConfoundingConfig,
+    ConfoundingResult,
+    ContingencyResult,
+    analyze_confounding,
+    build_contingency_table,
+)
+from biodetective.analysis.expression_qc import (
+    ExpressionQCConfig,
+    VarianceQCResult,
+    analyze_gene_variance,
+    calculate_gene_variance,
+    calculate_sample_statistics,
+    detect_expression_issues,
+    run_expression_qc,
+)
+from biodetective.analysis.label_consistency import (
+    CentroidSimilarityResult,
+    CrossValidatedLabelResult,
+    LabelConsistencyConfig,
+    LabelConsistencyResult,
+    analyze_centroid_similarity,
+    analyze_label_consistency,
+    cross_validated_label_consistency,
+)
+from biodetective.analysis.metadata_qc import (
+    MetadataQCConfig,
+    detect_category_inconsistencies,
+    detect_metadata_duplicates,
+    detect_metadata_structure,
+    detect_missing_metadata,
+    run_metadata_qc,
+)
+from biodetective.analysis.metadata_mapper import (
+    MetadataMappingApproval,
+    MetadataRoleSuggestion,
+    create_mapping_approval,
+    ranked_columns_for_role,
+    suggest_metadata_roles,
+)
+from biodetective.analysis.outliers import (
+    CombinedOutlierResult,
+    IsolationForestResult,
+    OutlierConfig,
+    PCADistanceResult,
+    analyze_outliers,
+    combine_outlier_results,
+    detect_isolation_forest_outliers,
+    detect_pca_distance_outliers,
+)
+from biodetective.analysis.pca import PCAConfig, PCAResult, run_pca
+from biodetective.analysis.similarity import (
+    SimilarityConfig,
+    analyze_sample_similarity,
+    calculate_sample_correlations,
+    detect_high_similarity_pairs,
+)
+from biodetective.analysis.sex_consistency import (
+    SexConsistencyResult,
+    SexMarkerAvailability,
+    analyze_sex_marker_consistency,
+    check_sex_marker_availability,
+)
+
+__all__ = [
+    "BatchEffectConfig",
+    "BatchEffectResult",
+    "CentroidSimilarityResult",
+    "CombinedOutlierResult",
+    "CrossValidatedLabelResult",
+    "ConfoundingConfig",
+    "ConfoundingResult",
+    "ContingencyResult",
+    "COMPLETE_CONFOUNDING_EXPLANATION",
+    "ExpressionQCConfig",
+    "IsolationForestResult",
+    "LabelConsistencyConfig",
+    "LabelConsistencyResult",
+    "MetadataQCConfig",
+    "MetadataMappingApproval",
+    "MetadataRoleSuggestion",
+    "OutlierConfig",
+    "PCAConfig",
+    "PCADistanceResult",
+    "PCAResult",
+    "SimilarityConfig",
+    "SexConsistencyResult",
+    "SexMarkerAvailability",
+    "VarianceQCResult",
+    "analyze_gene_variance",
+    "analyze_centroid_similarity",
+    "analyze_batch_pca_association",
+    "analyze_confounding",
+    "analyze_label_consistency",
+    "analyze_outliers",
+    "analyze_sample_similarity",
+    "analyze_sex_marker_consistency",
+    "calculate_gene_variance",
+    "calculate_sample_statistics",
+    "calculate_sample_correlations",
+    "create_mapping_approval",
+    "build_contingency_table",
+    "check_sex_marker_availability",
+    "combine_outlier_results",
+    "cross_validated_label_consistency",
+    "detect_expression_issues",
+    "detect_category_inconsistencies",
+    "detect_metadata_duplicates",
+    "detect_metadata_structure",
+    "detect_missing_metadata",
+    "detect_high_similarity_pairs",
+    "detect_isolation_forest_outliers",
+    "detect_pca_distance_outliers",
+    "run_pca",
+    "run_expression_qc",
+    "run_metadata_qc",
+    "ranked_columns_for_role",
+    "suggest_metadata_roles",
+]
