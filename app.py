@@ -29,6 +29,7 @@ from biodetective.reporting import (
     generate_sample_scores_csv,
 )
 from biodetective.reporting.exports import sorted_findings
+from biodetective.ui import apply_responsive_styles
 
 
 def render_finding_details(finding) -> None:
@@ -282,6 +283,7 @@ def render_report_downloads(result) -> None:
 
 
 st.set_page_config(page_title="BioDetective", page_icon="🧬", layout="wide")
+apply_responsive_styles()
 
 st.title("BioDetective")
 st.subheader("Gene-Expression Data Quality Evidence & Review")

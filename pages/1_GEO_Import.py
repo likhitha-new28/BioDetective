@@ -4,9 +4,11 @@ import pandas as pd
 import streamlit as st
 
 from biodetective.integrations.geo import GEOIntegrationError, fetch_geo_metadata
+from biodetective.ui import apply_responsive_styles
 
 
 st.set_page_config(page_title="BioDetective — GEO Import", page_icon="🧬", layout="wide")
+apply_responsive_styles()
 st.title("GEO Import")
 st.caption("Discover public GEO metadata and files. BioDetective will not download or analyze a dataset automatically.")
 

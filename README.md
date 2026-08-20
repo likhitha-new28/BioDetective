@@ -96,6 +96,12 @@ Then upload:
 
 The included example is deterministic synthetic data generated with random seed `42`; it is not a research dataset.
 
+## Deploy to the web
+
+The included `render.yaml` deploys BioDetective as a responsive Streamlit web service for mobile and desktop browsers. In Render, choose **New > Blueprint**, connect this repository, and apply the detected `biodetective` service. Render supplies the public HTTPS URL and deploys new commits automatically.
+
+For Streamlit Community Cloud, select `app.py` as the entrypoint and Python 3.12. No secrets are required for the core application. Uploaded research files stay in the active Streamlit session and are not committed to the repository.
+
 To run tests:
 
 ```bash
